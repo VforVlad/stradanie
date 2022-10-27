@@ -45,12 +45,12 @@ min-height: 100%;
 }
 
 .header {
-/*background-image: url("../img/header-background.jpg");
+background-image: url("../img/header-background.jpg");
 height: 220px;
 position: relative;
 border-bottom-width: 2px;
 border-style: solid;
-border-image: linear-gradient(to right, #653f54, black) 1;*/*/
+border-image: linear-gradient(to right, #653f54, black) 1;
 }
 
 .header:after {
@@ -110,7 +110,6 @@ border-image: linear-gradient(to right, #653f54, black) 1;*/*/
 	font-size: 20px;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
-	border: solid 1px white
 	text-transform: uppercase;
 	z-index: 1;
   font-weight: 500;
@@ -164,7 +163,7 @@ border-image: linear-gradient(to right, #653f54, black) 1;*/*/
 	line-height: 35px;
   font-weight: 450;
   border-bottom: solid 2px white;
-  border-image: linear-gradient(to right, white, rgba(13,13,13,1)50%) 1;*/
+  border-image: linear-gradient(to right, white, rgba(13,13,13,1)50%) 1;
 
 }
 
@@ -273,6 +272,7 @@ justify-content: center;
   font-family: 'Montserrat', sans-serif;
   transition: .4s;
 }
+
 .menu_link:after {
 	border-radius: 3px;
 	justify-content: center;
@@ -288,17 +288,297 @@ justify-content: center;
   border: 2px solid rgba(0, 0, 0, 0);
   transition: .4s;
 }
+
 .menu_link:hover:after {
 	border-radius: 3px;
   border-color: #e8a7cc;
   width: calc(100% - 10px);
   height: calc(100% + 10px);
-  border-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
-    -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
-    0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
-  	animation: shine 2s forwards, flicker 3s infinite;
-
 }
+
+.mob-button {
+  display: none;
+  border-radius: 3px;
+  text-decoration: none;
+  /* border: 2px solid white; */
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  transition: .4s;
+  padding: 5px 5px 15px 35px;
+}
+
+
+.bar {
+  display: block;
+  width: 25px;    
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  background-color: whitesmoke;
+  border-radius: 3px;
+}
+
+
+ .swiper {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  border-bottom: solid 2px white;
+  border-image: linear-gradient(to right,  rgba(31,31,31,1)50%, white) 1;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.swiper-wrapper {
+  margin: 20px 0px 50px 0px;
+}
+
+.swiper-slide {
+  text-align: center;
+}
+
+.swiper-slide img{
+  max-width: 100%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #e8a7cc;
+  font-size: 10px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    background-color:#e8a7cc;
+}
+
+@media only screen and (max-width: 945px) {
+  .header-logo img {
+    height: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: -60px;
+  }
+
+  .main__text_left-photo {
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .main__text_left-photo {
+    flex-direction: column;
+    align-items: flex-start;
+  }  
+  .text_right {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-logo img {
+    height: auto;
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    left: -90px;
+  }
+
+  .club-description {
+    font-size: 10px;
+    padding-top: 5px;
+  }
+  
+  .club-name {
+    font-size: 30px;
+  }
+
+  .menu_link {
+    padding: 5px 5px 5px 5px;
+  }
+
+
+
+  .header {
+    height: 180px;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .menu-item {
+    flex-basis: 100px;
+    justify-content: center;
+    }
+
+    img.kazan-club {
+      width: 100%;
+      height: auto;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+  .menu-list {
+    position: fixed;
+    left: -100%;
+    top: 125px;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    height: 40%;
+    background-color: black;
+    transition: 0.6s;
+    margin-bottom: 0px;
+  }
+
+  .menu-list.active {
+    left: 0;
+  }
+
+  .menu-item{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .menu_link {
+    border: none;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    }
+
+  .burger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+
+  .header-logo img {
+    display: none;
+  }
+
+  .mob-button {
+    display: flex;  
+    width: 10%;
+    gap: 5px;
+    z-index: 2;
+  }
+
+  .header {
+    height: 130px;
+  }
+
+  .second__title {
+    font-size: 20px;
+  }
+
+  .club-description {
+    height: 40px;
+    padding-top: 18px;
+  }
+
+  .club-name {
+    height:100%;
+    padding-top: 18px;
+    padding-bottom: 10px;
+  }
+
+  .main-title {
+    font-size: 17px;
+    margin-top: 0px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-top: 15px;
+  }
+
+  .main__text {
+    line-height: 20px;
+    font-size: 12px;
+  }
+
+  .quote__text {
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+  .main__text_left-photo {
+    display: block;
+    height: 10%;
+    width: auto;
+  }
+  
+  img.kazan-club {
+    width: 100%;
+    height: auto;
+  }
+
+  .text_right {
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+
+  .menu-list {
+    height: 25%;
+  }
+
+  .club-name{
+	font-size: 20px;
+  }
+  .club-description {
+  font-size: 10px;
+  }
+
+  .main-title {
+    font-size: 17px;
+    margin-top: 0px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    margin-top: 15px;
+  }
+
+  .main__text {
+    line-height: 20px;
+    font-size: 12px;
+  }
+
+  .main__text_left-photo {
+    display: block;
+    height: 10%;
+    width: auto;
+  }
+  
+  img.kazan-club {
+    width: 100%;
+    height: auto;
+  }
+
+  .text_right {
+    padding-left: 0px;
+  }
+
+  .quote__text {
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0px;
+    padding: 0px;
+  }
+ 
+}
+
 
 @keyframes blink {
   0%,
@@ -327,7 +607,7 @@ justify-content: center;
 	}
 
 .fast-flicker {
-  animation: shine 3s forwards, blink 2s 0.7s  ;
+  animation: shine 3s forwards, blink 3s 0.7s;
 }
 
 @keyframes shine {
@@ -473,3 +753,4 @@ justify-content: center;
 background: #302129;
 height: 80px;
 }
+
