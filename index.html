@@ -6,15 +6,11 @@
 		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&subset=cyrillic" rel="stylesheet">
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<div class="wraper">
-			<header style="background-image: url(img/header-background.jpg);
-						   height: 220px;
-						   position: relative;
-						   border-bottom-width: 2px;
-						   border-style: solid;
-						   border-image: linear-gradient(to right, #653f54, black) 1;*/">
+			<header class="header">
 				<div class="header-logo">
 					<img loading="lazy" src="img/repinO.png" alt="" class="oleg">
 				</div>
@@ -25,12 +21,31 @@
 						</div>
 						<nav class="header-menu menu">
 							<ul class="menu-list">
-								<li class="menu-item"><a href="index.html" class="menu_link">о клубе</a></li>
-								<li class="menu-item"><a href="" class="menu_link">площадки</a></li>
-								<li class="menu-item"><a href="members.html" class="menu_link">члены</a></li>
-								<li class="menu-item"><a href="" class="menu_link">вступить</a></li>
+								<li class="menu-item">
+									<a href="index.html" class="menu_link">о клубе</a>
+								</li>
+								<li class="menu-item">
+									<a href="platforms.html" class="menu_link">площадки</a>
+								</li>
+								<li class="menu-item">
+									<a href="members.html" class="menu_link">члены</a>
+								</li>
+								<li class="menu-item">
+									<a href="" class="menu_link">вступить</a>
+								</li>
+
 							</ul>
 						</nav>
+						<div class="mob-button flicker">
+							<div class="burger">
+							<span class="bar"></span>
+							<span class="bar"></span>
+							<span class="bar"></span>
+							</div>
+							<div class="menu-button">
+							<code> << </code>	
+							</div>
+						</div>
 					</div>
 			</header>
 			<main class="main">
@@ -55,7 +70,7 @@
 						</section>
 						<section>
 							<div class="main__text_left-photo">
-								<div class="main__text_photo"><img loading="lazy" src="img/club-photo-color.png" alt=""></div>
+								<div class="main__text_photo"><img loading="lazy" src="img/club-photo-color.png" alt="" class="kazan-club"></div>
 								<p class="main__text text_right">
 								<span class="second__title"><span class="lover">Снобизм</span> не пройдет!</span><br>
 								Профессионалы рынка, равно как и представители виноделен совсем не обязательно душнилы и конформисты. 
@@ -76,5 +91,6 @@
 			</footer>
 
 		</div>
+		<script src="./js/script.js"></script>
 	</body>
 </html>
